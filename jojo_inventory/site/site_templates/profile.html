@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-image" style="background-image: url('../static/image/jojo_wallpaper - Copy.jpg');background-repeat:no-repeat;background-size: cover; height: 100vh">
+<header class="hero-section">
+    <div id="header">
+        <h1 class="header-text">Welcome to Jojo's Stands{{ current_user.email }}!</h1>
+    </div>
+</header>
+</div>
+
+<div class="container">
+    <h3>Here are your profile details</h3>
+    <ul class="list-group">
+        <li class="list-group-item">Email:{{current_user.email}}</li>
+        <li class="list-group-item">Token: {{current_user.token}}</li>
+        
+    </ul>
+</div>
+{% endblock content %}
